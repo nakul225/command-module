@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if g.user %}
+    <form action="{{ url_for('process_command_alfred') }}" method=post class=add-entry>
+      <dl>
+        <dt>Title:
+        <dd>What can I do for you Master Wayne?
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+  {% endif %}
+{% endblock %}
